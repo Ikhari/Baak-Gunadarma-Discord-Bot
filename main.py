@@ -39,6 +39,7 @@ async def on_command_error(ctx, error):
 
 # Do you want flag ?
 @client.hybrid_command()
+@commands.guild_only()
 async def flag(ctx):
     if ctx.guild and ctx.guild.id == 1050590155498606613:
         await ctx.send("This command can't be used in this server.")
